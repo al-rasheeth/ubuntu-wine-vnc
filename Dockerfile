@@ -13,6 +13,6 @@ RUN dpkg --add-architecture i386 \
     && curl -sLo /etc/apt/sources.list.d/winehq-noble.sources \
         https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources \
     && apt-get update -qq \
-    && apt-get install --install-recommends -y winehq-stable iproute2 \
+    && apt-get install --install-recommends -y winehq-stable iproute2 python3-pip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
